@@ -124,7 +124,7 @@ local ClockinWebhook = ''
 
 
 # Jailing & Community Service
-* If you're getting kicked for attempted exploit abuse while jailing. Locate the following event below in qb-policejob > server > main.lua
+* If you're getting kicked for attempted exploit abuse when jailing. Located the follow event below on qb-policejob > server > main.lua
 
 ```lua
 police:server:JailPlayer
@@ -153,7 +153,7 @@ RegisterNetEvent('inventory:server:SetInventoryData', function(fromInventory, to
                 end
                 local serial = itemData.info.serie
                 local imageurl = ("https://cfx-nui-qb-inventory/html/images/%s.png"):format(itemData.name)
-                local notes = "Purchased at Ammunation"
+                local notes = "Comprado na Ammunation"
                 local owner = Player.PlayerData.charinfo.firstname .. " " .. Player.PlayerData.charinfo.lastname
                 local weapClass = 1
                 local weapModel = QBCore.Shared.Items[itemData.name].label
@@ -161,7 +161,7 @@ RegisterNetEvent('inventory:server:SetInventoryData', function(fromInventory, to
                 TriggerClientEvent('qb-shops:client:UpdateShop', src, QBCore.Shared.SplitStr(shopType, "_")[2], itemData, fromAmount)
                 QBCore.Functions.Notify(src, itemInfo["label"] .. " bought!", "success")
                 exports['ps-mdt']:CreateWeaponInfo(serial, imageurl, notes, owner, weapClass, weapModel)
-                TriggerEvent("qb-log:server:CreateLog", "shops", "Shop item bought", "green", "**"..GetPlayerName(src) .. "** bought a " .. itemInfo["label"] .. " for $"..price)
+                TriggerEvent("qb-log:server:CreateLog", "shops", "Item da loja comprado", "green", "**"..GetPlayerName(src) .. "** bought a " .. itemInfo["label"] .. " for $"..price)
             elseif bankBalance >= price then
                 Player.Functions.RemoveMoney("bank", price, "itemshop-bought-item")
                 if QBCore.Shared.SplitStr(itemData.name, "_")[1] == "weapon" then
@@ -170,7 +170,7 @@ RegisterNetEvent('inventory:server:SetInventoryData', function(fromInventory, to
                 end
                 local serial = itemData.info.serie
                 local imageurl = ("https://cfx-nui-qb-inventory/html/images/%s.png"):format(itemData.name)
-                local notes = "Purchased at Ammunation"
+                local notes = "Comprado na Ammunation"
                 local owner = Player.PlayerData.charinfo.firstname .. " " .. Player.PlayerData.charinfo.lastname
                 local weapClass = 1
                 local weapModel = QBCore.Shared.Items[itemData.name].label
@@ -178,9 +178,9 @@ RegisterNetEvent('inventory:server:SetInventoryData', function(fromInventory, to
                 TriggerClientEvent('qb-shops:client:UpdateShop', src, QBCore.Shared.SplitStr(shopType, "_")[2], itemData, fromAmount)
                 QBCore.Functions.Notify(src, itemInfo["label"] .. " bought!", "success")
 				exports['ps-mdt']:CreateWeaponInfo(serial, imageurl, notes, owner, weapClass, weapModel)
-                TriggerEvent("qb-log:server:CreateLog", "shops", "Shop item bought", "green", "**"..GetPlayerName(src) .. "** bought a " .. itemInfo["label"] .. " for $"..price)
+                TriggerEvent("qb-log:server:CreateLog", "shops", "Item da loja comprado", "green", "**"..GetPlayerName(src) .. "** bought a " .. itemInfo["label"] .. " for $"..price)
             else
-                QBCore.Functions.Notify(src, "You don't have enough cash..", "error")
+                QBCore.Functions.Notify(src, "Você não tem dinheiro suficiente..", "error")
             end
 ````
 
