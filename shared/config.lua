@@ -3,6 +3,14 @@ Config = Config or {}
 Config.UsingPsHousing = false
 Config.UsingDefaultQBApartments = true
 Config.OnlyShowOnDuty = true
+
+-- RECOMMENDED Fivemerr Images. DOES NOT EXPIRE. 
+-- YOU NEED TO SET THIS UP FOLLOW INSTRUCTIONS BELOW.
+-- Documents: https://docs.fivemerr.com/integrations/mdt-scripts/ps-mdt
+Config.FivemerrMugShot = true
+
+-- Discord webhook for images. NOT RECOMMENDED, IMAGES EXPIRE.
+Config.MugShotWebhook = false
 Config.UseCQCMugshot = true
 
 -- Frontal, Traseiro. Use 4 para ambos os lados, recomendamos deixar como 1 para o padrão.
@@ -20,6 +28,12 @@ Config.QBBankingUse = false
 -- Se estiver utilizando a versão mais recente do lj-inventory do GitHub, nenhuma modificação adicional é necessária.
 -- No entanto, se estiver utilizando um sistema de inventário diferente, por favor, consulte a seção "Edição de Inventário | Adição Automática de Armas com Imagens" no README do ps-mdt.
 Config.InventoryForWeaponsImages = "ox_inventory"
+
+-- Only compatible with ox_inventory
+Config.RegisterWeaponsAutomatically = true
+
+-- Set to true to register all weapons that are added via AddItem in ox_inventory
+Config.RegisterCreatedWeapons = true
 
 -- "LegacyFuel", "lj-fuel", "ps-fuel"
 Config.Fuel = "cdn-fuel"

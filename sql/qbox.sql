@@ -1,5 +1,4 @@
-DROP TABLE IF EXISTS `mdt_data`;
-CREATE TABLE `mdt_data` (
+CREATE TABLE IF NOT EXISTS `mdt_data` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `cid` VARCHAR(20) DEFAULT NULL,
   `information` MEDIUMTEXT DEFAULT NULL,
@@ -12,8 +11,7 @@ CREATE TABLE `mdt_data` (
   KEY `id` (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
-DROP TABLE IF EXISTS `mdt_bulletin`;
-CREATE TABLE `mdt_bulletin` (
+CREATE TABLE IF NOT EXISTS `mdt_bulletin` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `title` TEXT NOT NULL,
   `desc` TEXT NOT NULL,
@@ -23,8 +21,7 @@ CREATE TABLE `mdt_bulletin` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
-DROP TABLE IF EXISTS `mdt_reports`;
-CREATE TABLE `mdt_reports` (
+CREATE TABLE IF NOT EXISTS `mdt_reports` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `author` varchar(50) DEFAULT NULL,
   `title` varchar(255) DEFAULT NULL,
@@ -39,8 +36,7 @@ CREATE TABLE `mdt_reports` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
-DROP TABLE IF EXISTS `mdt_bolos`;
-CREATE TABLE `mdt_bolos` (
+CREATE TABLE IF NOT EXISTS `mdt_bolos` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `author` varchar(50) DEFAULT NULL,
   `title` varchar(50) DEFAULT NULL,
@@ -56,8 +52,7 @@ CREATE TABLE `mdt_bolos` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
-DROP TABLE IF EXISTS `mdt_convictions`;
-CREATE TABLE `mdt_convictions` (
+CREATE TABLE IF NOT EXISTS `mdt_convictions` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `cid` varchar(50) DEFAULT NULL,
   `linkedincident` int(11) NOT NULL DEFAULT 0,
@@ -74,8 +69,7 @@ CREATE TABLE `mdt_convictions` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
-DROP TABLE IF EXISTS `mdt_incidents`;
-CREATE TABLE `mdt_incidents` (
+CREATE TABLE IF NOT EXISTS `mdt_incidents` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `author` varchar(50) NOT NULL DEFAULT '',
   `title` varchar(50) NOT NULL DEFAULT '0',
@@ -89,8 +83,7 @@ CREATE TABLE `mdt_incidents` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
-DROP TABLE IF EXISTS `mdt_logs`;
-CREATE TABLE `mdt_logs` (
+CREATE TABLE IF NOT EXISTS `mdt_logs` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `text` text NOT NULL,
   `time` varchar(20) DEFAULT NULL,
@@ -98,8 +91,7 @@ CREATE TABLE `mdt_logs` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
-DROP TABLE IF EXISTS `mdt_vehicleinfo`;
-CREATE TABLE `mdt_vehicleinfo` (
+CREATE TABLE IF NOT EXISTS `mdt_vehicleinfo` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `plate` varchar(50) DEFAULT NULL,
   `information` text NOT NULL DEFAULT '',
@@ -110,8 +102,7 @@ CREATE TABLE `mdt_vehicleinfo` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
-DROP TABLE IF EXISTS `mdt_weaponinfo`;
-CREATE TABLE `mdt_weaponinfo` (
+CREATE TABLE IF NOT EXISTS `mdt_weaponinfo` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `serial` varchar(50) DEFAULT NULL,
   `owner` varchar(50) DEFAULT NULL,
@@ -123,8 +114,7 @@ CREATE TABLE `mdt_weaponinfo` (
   UNIQUE KEY `serial` (`serial`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
-DROP TABLE IF EXISTS `mdt_impound`;
-CREATE TABLE `mdt_impound` (
+CREATE TABLE IF NOT EXISTS `mdt_impound` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `vehicleid` int(11) NOT NULL,
   `linkedreport` int(11) NOT NULL,
@@ -133,8 +123,7 @@ CREATE TABLE `mdt_impound` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
-DROP TABLE IF EXISTS `mdt_clocking`;
-CREATE TABLE `mdt_clocking` (
+CREATE TABLE IF NOT EXISTS `mdt_clocking` (
   `id` int(10) NOT NULL AUTO_INCREMENT,
   `user_id` varchar(50) NOT NULL DEFAULT '',
   `firstname` varchar(255) NOT NULL DEFAULT '',
