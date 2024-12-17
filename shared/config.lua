@@ -78,7 +78,7 @@ Config.PoliceJobs = {
 
 Config.AmbulanceJobs = {
     ['ambulance'] = true,
-    ['doctor'] = true
+    ['fire'] = true
 }
 
 Config.DojJobs = {

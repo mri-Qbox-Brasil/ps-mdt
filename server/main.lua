@@ -1912,7 +1912,7 @@ RegisterNetEvent('mdt:server:removeMoney', function(citizenId, fine, incidentId)
 			TriggerClientEvent('QBCore:Notify', Player.PlayerData.source, fine.."$ was removed from your bank!")
 			giveCitationItem(src, citizenId, fine, incidentId)
 		else
-			TriggerClientEvent('QBCore:Notify', Player.PlayerData.source, "Something went wrong!")
+			TriggerClientEvent('QBCore:Notify', Player.PlayerData.source, "Algo deu errado!")
 		end
 		antiSpam = true
 		SetTimeout(60000, function()

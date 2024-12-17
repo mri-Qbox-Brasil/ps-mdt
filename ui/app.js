@@ -44,6 +44,7 @@ const PoliceJobs = {
 
 const AmbulanceJobs = {
   ['ambulance']: true,
+  ['fire']: true
 }
 
 const DojJobs = {
@@ -78,14 +79,14 @@ function getFormattedDate(date, prefomattedDate = false, hideYear = false) {
   }
 
   if (prefomattedDate) {
-    return `${prefomattedDate} at ${hours}:${minutes}`;
+    return `${prefomattedDate} às ${hours}:${minutes}`;
   }
 
   if (hideYear) {
-    return `${day}. ${month} at ${hours}:${minutes}`;
+    return `${day}. ${month} às ${hours}:${minutes}`;
   }
 
-  return `${day}. ${month} ${year}. at ${hours}:${minutes}`;
+  return `${day}. ${month} ${year}. às ${hours}:${minutes}`;
 }
 
 var quotes = [
@@ -1463,7 +1464,7 @@ $(document).ready(() => {
     function () {
       let existing = !(
         $(".manage-bolos-editing-title").html() ==
-        "Você está criando um novo B.O."
+        "Você está criando um novo BOLETIM"
       );
       let id = $(".manage-bolos-editing-title").data("id");
       let title = $("#bolotitle").val();
@@ -2705,7 +2706,7 @@ $(document).ready(() => {
                                     <div class="dmv-tags">
                                         <div class="dmv-tag ${paint}-color">${value.colorName}</div>
                                         <div class="dmv-tag ${impound}">PATIO</div>
-                                        <div class="dmv-tag ${bolo}">BOLETIM</div>
+                                        <div class="dmv-tag ${bolo}">SUSPEITOS</div>
                                         <div class="dmv-tag ${stolen}">Roubado</div>
                                         <div class="dmv-tag ${codefive}">Code 5</div>
                                     </div>
@@ -3836,7 +3837,7 @@ $(document).ready(() => {
       color9: "#6E707C",
       color10: "#8F741B",
       image: "img/BCSO.webp",
-      name: "DEPARTAMENTO DETRAN",
+      name: "DEPARTAMENTO VEÍCULOS",
     },
     sasp: {
       color1: "#423f39",
@@ -3992,7 +3993,6 @@ $(document).ready(() => {
             applyCustomTheme(customThemes.sasp)
           } else if (sentJob == "sast") {
             applyCustomTheme(customThemes.sast)
-
           } else if (sentJob == "sapr") {
             applyCustomTheme(customThemes.sapr)
           } else if (sentJob == "lssd") {
@@ -4000,13 +4000,32 @@ $(document).ready(() => {
           } else if (sentJob == "doc") {
             applyCustomTheme(customThemes.doc)
           }
-        $(".bolo-nav-item").html("BOLETIM");
-        $(".bolos-search-title").html("BOLETIMS");
-        $("#bolos-search-input").attr("placeholder", "Pesquisar boletim...");
-        $(".manage-bolos-title").html("Gerencia Boletim");
-        $(".manage-bolos-editing-title").html(
-          "Você está criando um novo boletim"
-        );
+        $(".bolo-nav-item").html("SISTEMA DE INVESTIGAÇÃO");
+        $(".bolos-search-title").html("PESQUISAR");
+        $("#bolos-search-input").attr("placeholder", "Digite para filtrar...");
+        $(".manage-bolos-title").html("GERENCIAR RELATÓRIO");
+        $(".manage-bolos-editing-title").html(`
+          <p>Clique em <strong>'NOVO'</strong> para relatar um suspeito foragido.</p>
+          <h3>Quando Utilizar</h3>
+          <p style="text-align: left;">O procedimento deve ser aplicado nas seguintes situações:</p>
+          <ul style="text-align: left; padding-left: 20px; list-style-type: disc;">
+              <li>
+                  <strong>Fuga de Suspeitos:</strong> Quando o indivíduo consegue evadir-se antes de ser abordado ou detido.
+              </li>
+              <li>
+                  <strong>Atos Criminosos Presenciados:</strong> Quando um crime foi testemunhado, mas não foi possível realizar a abordagem imediata.
+              </li>
+              <li>
+                  <strong>Busca Ativa:</strong> Durante operações em andamento, como buscas por veículos roubados, desaparecidos, ou suspeitos de crimes graves.
+              </li>
+              <li>
+                  <strong>Objetos de Interesse:</strong> Identificação de itens furtados, armas, ou outros objetos utilizados em crimes.
+              </li>
+          </ul>
+      `);
+      
+      
+      
         $(".boloplate-title").html("PLACAS");
         $(".boloowner-title").html("PROPRIETÁRIO");
         $(".boloindividual-title").html("INDIVIDUAL");
@@ -4061,7 +4080,7 @@ $(document).ready(() => {
         $(".weapons-nav-item").hide()
         $("#home-warrants-container").fadeOut(0);
         $("#home-reports-container").fadeIn(0);
-        if (sentJob == "ambulance") {
+        if (sentJob == "ambulance" ) {
           applyCustomTheme(customThemes.ambulance)
         }
         //$(".quote-span").html("The simplest explanation is almost always somebody screwed up.");
@@ -4254,8 +4273,13 @@ window.addEventListener("message", function (event) {
             activeInfoJob = `<div class="unit-job active-info-job-doc">DOC</div>`;
           }
         } else if (AmbulanceJobs[unit.unitType] !== undefined) {
-          activeInfoJob = `<div class="unit-job active-info-job-ambulance">Ambulance</div>`
-          emsCount++;
+          if (unit.unitType == "ambulance") { emsCount++;
+            activeInfoJob = `<div class="unit-job active-info-job-ambulance">EMS</div></div>`
+          } 
+          
+          // if(unit.unitType == "fire") { fireCount++;
+          //   activeInfoJob = `<div class="unit-job active-info-job-fire">FIRE</div>`
+          // }
         } else if (DojJobs[unit.unitType] !== undefined) {
           activeInfoJob = `<div class="unit-job active-info-job-doj">DOJ</div>`
           dojCount++;
@@ -4276,7 +4300,7 @@ window.addEventListener("message", function (event) {
 
       $("#police-count").html(policeCount);
       $("#sasp-count").html(saspCount);
-      $("#bcso-count").html(bcsoCount);
+      $("#rota-count").html(rotaCount);
       $("#ems-count").html(emsCount);
       $("#doj-count").html(dojCount);
 
@@ -4976,7 +5000,7 @@ window.addEventListener("message", function (event) {
       });
     } else if (eventData.type == "bolos") {
       let table = eventData.data;
-      var reportName = "General BOLO";
+      var reportName = "SUSPEITO";
       canSearchForProfiles = true;
       $(".bolos-items").empty();
       if ($(".badge-logo").attr("src") == "img/ems_badge.webp") {
@@ -5362,10 +5386,10 @@ function fidgetSpinner(page) {
 function timeShit() {
   let localDate = new Date();
   const myTimeZone = Intl.DateTimeFormat().resolvedOptions().timeZone
-  date = localDate.toLocaleDateString("en-US", {
+  date = localDate.toLocaleDateString("pt-BR", {
     timeZone: myTimeZone,
   });
-  time = localDate.toLocaleTimeString("en-US", {
+  time = localDate.toLocaleTimeString("pt-BR", {
     timeZone: myTimeZone,
   });
   $(".date").html(date);
@@ -5638,7 +5662,7 @@ function searchProfilesResults(result) {
                 ${licences}
             </div>
             <div class="profile-criminal-tags">
-                <span class="license-tag ${warrant}">${value.warrant ? "Active" : "No"} Mandado</span>
+                <span class="license-tag ${warrant}">${value.warrant ? "Active" : "Sem"} </span>
                 <span class="license-tag ${convictions}">${value.convictions} Convicções </span>
             </div>
         </div>
@@ -5804,7 +5828,7 @@ center: [0, -1024],
 maxBoundsViscosity: 1.0
 });
  // https://upload.versescripts.net/ 
-var customImageUrl = 'https://files.fivemerr.com/images/a62a84ff-6a1b-4dc4-a199-c7140a216703.jpg';
+var customImageUrl = 'https://files.fivemerr.com/images/9da3db41-0d0e-469a-9408-c4fd6aeef5a1.jpg';
 
 var sw = map.unproject([0, 1024], 3 - 1);
 var ne = map.unproject([1024, 0], 3 - 1);

@@ -8,11 +8,9 @@
     <title>Project Sloth MDT</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin=""/>
-    <!-- <script src="nui://game/ui/jquery.js" type="text/javascript"></script> -->
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script  src="https://code.jquery.com/ui/1.13.1/jquery-ui.min.js" integrity="sha256-eTyxS0rkjpLEo16uXTS0uVCS4815lc40K2iVpWDvdSY=" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
- 
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
     <!-- Markdown -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Trumbowyg/2.27.3/ui/trumbowyg.min.css" integrity="sha512-Fm8kRNVGCBZn0sPmwJbVXlqfJmPC13zRsMElZenX6v721g/H7OukJd8XzDEBRQ2FSATK8xNF9UYvzsCtUpfeJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -23,7 +21,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Trumbowyg/2.27.3/plugins/fontfamily/trumbowyg.fontfamily.min.js" integrity="sha512-oATdSCPRZu3qFFyxrZ66ma2QbQybLqpRqwLRp2IQEaIABnEHcs2qDf6UOVA/V5LhBvxFxKCNvyVb/yQfwDkFhQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Trumbowyg/2.27.3/plugins/colors/trumbowyg.colors.min.js" integrity="sha512-SHpxBJFbCaHlqGpH13FqtSA+QQkQfdgwtpmcWedAXFCDxAYMgrqj9wbVfwgp9+HgIT6TdozNh2UlyWaXRkiurw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Trumbowyg/2.27.3/plugins/indent/trumbowyg.indent.min.js" integrity="sha512-N89zRHLWXok+vH182YWrgGljMTqIw3lUfseand3N4OqzTtIXkObsRoq3l1vMBkp008c1fb+KGYU/DwJO783cug==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-
 </head>
 
 <body>
@@ -59,7 +56,6 @@
             </div>
         </div>
     </div>
-
     <div class="respond-calls" style="display:none;">
         <div class="respond-calls-container" style="display:none;">
             <div class="respond-calls-title">Resposta de chamada</div>
@@ -68,7 +64,6 @@
             <textarea class="respond-calls-input" type="text" id="respondcalls" name="respondcalls" placeholder="O QUE VOCÊ GOSTARIA DE RESPONDER?"></textarea>
         </div>
     </div>
-
     <div class="incidents-person-search">
         <div class="incidents-person-search-container">
             <div class="incidents-person-search-title">Pesquisa de pessoa</div>
@@ -78,7 +73,6 @@
             </div>
         </div>
     </div>
-
     <div class="convictions-known">
         <div class="convictions-known-container">
             <div class="convictions-known-title">CONDENAÇÕES</div>
@@ -86,7 +80,6 @@
             </div>
         </div>
     </div>
-
     <div class="incidents-known">
         <div class="incidents-known-container">
             <div class="incidents-known-title">Incidentes Conhecidos</div>
@@ -119,7 +112,7 @@
             <img src="img/sasp_badge.webp" class="badge-logo">
             <div class="header-left">
                 <div class="header-title" style="color: #caa95d; font-weight: bold; font-size: 18px;">POLICIAMENTO ALOGOANO</div>
-                <div style="color: white; font-weight: lighter; font-size: 16px;">Terminal de Banco de Dados</div>
+                <div style="color: white; font-weight: lighter; font-size: 16px;">Sistema Nacional de Informações de Segurança Pública</div>
             </div>
             <div class="header-middle">
                 <div class="date">Carregando...</div>
@@ -135,17 +128,17 @@
         <div class="main-container">
             <div class="nav-menu">
                 <div class="nav-item">PAINEL</div>
-                <div class="nav-item">CIDADÃOS</div>
-                <div class="nav-item incidents-nav-item">INCIDENTES</div>
-                <div class="nav-item">RELATÓRIOS</div>
-                <div class="nav-item map-nav-item">MAPA</div>
-                <div class="nav-item bolo-nav-item">BOLETIM</div>
-                <div class="nav-item">LISTA</div>
-                <div class="nav-item">POPs</div>
-                <div class="nav-item dmv-nav-item">DETRAN</div>
-                <div class="nav-item weapons-nav-item" data-page=".weapons-page-container">ARMAS</div>
-                <div class="nav-item cams-nav-item">CAMERA</div>
-                <div class="nav-item">REGISTROS</div>
+                <div class="nav-item">PESQUISAR <br/>CIDADÃO</div>
+                <div class="nav-item incidents-nav-item">SISTEMA <br/>PENITENCIÁRIO</div>
+                <div class="nav-item">BOLETIM DE OCORRÊNCIA</div>
+                <div class="nav-item bolo-nav-item">SUSPEITOS</div>
+                <div class="nav-item map-nav-item">GPS DE <br/>DESPACHO</div>
+                <div class="nav-item">CÓDIGO PENAL</div>
+                <!-- <div class="nav-item">DOCS</div> -->
+                <div class="nav-item dmv-nav-item">PESQUISAR <br/>VEÍCULOS</div>
+                <div class="nav-item weapons-nav-item" data-page=".weapons-page-container">PESQUISAR <br/>ARMAMENTO</div>
+                <!-- <div class="nav-item cams-nav-item">CAMERA</div> -->
+                <div class="nav-item">LOGS</div>
             </div>
         </div>
     </div>
@@ -154,7 +147,7 @@
             <img src="img/sasp_badge.webp" class="badge-logo">
             <div class="header-left">
                 <div class="header-title" style="color: #caa95d; font-weight: bold; font-size: 18px;">POLICIAMENTO</div>
-                <div style="color: white; font-weight: lighter; font-size: 16px;">Terminal de Banco de Dados</div>
+                <div style="color: white; font-weight: lighter; font-size: 16px;">Sistema Nacional de Informações de Segurança Pública</div>
             </div>
             <div class="header-middle">
                 <div class="date">Carregando...</div>
@@ -169,17 +162,17 @@
         <div class="main-container">
             <div class="nav-menu">
                 <div class="nav-item active-nav" data-page=".dashboard-page-container">PAINEL</div>
-                <div class="nav-item" data-page=".profile-page-container">CIDADÃOS</div>
-                <div class="nav-item incidents-nav-item" data-page=".incidents-page-container">INCIDENTES</div>
-                <div class="nav-item" data-page=".reports-page-container">RELATÓRIOS</div>
-                <div class="nav-item map-nav-item" data-page=".map-page-container">MAPA</div>
-                <div class="nav-item bolo-nav-item" data-page=".bolos-page-container">BOLETIM</div>
-                <div class="nav-item penalcode-nav-item" data-page=".penalcode-page-container">LISTA</div>
-                <div class="nav-item sop-nav-item" data-page=".sop-page-container">POPs</div>
-                <div class="nav-item dmv-nav-item" data-page=".dmv-page-container">DETRAN</div>
-                <div class="nav-item weapons-nav-item" data-page=".weapons-page-container">ARMAS</div>
-                <div class="nav-item cams-nav-item" data-page=".cams-page-container">CAMERA</div>
-                <div class="nav-item" data-page=".stafflogs-page-container">REGISTROS</div>
+                <div class="nav-item" data-page=".profile-page-container">PESQUISAR <br/>CIDADÃO</div>
+                <div class="nav-item incidents-nav-item" data-page=".incidents-page-container">SISTEMA <br/>PENITENCIÁRIO</div>
+                <div class="nav-item" data-page=".reports-page-container">BOLETIM DE OCORRÊNCIA</div>
+                <div class="nav-item bolo-nav-item" data-page=".bolos-page-container">SUSPEITOS</div>
+                <div class="nav-item map-nav-item" data-page=".map-page-container">GPS DE <br/>DESPACHO</div>
+                <div class="nav-item penalcode-nav-item" data-page=".penalcode-page-container">CÓDIGO PENAL</div>
+                <!-- <div class="nav-item sop-nav-item" data-page=".sop-page-container">DOCS</div> -->
+                <div class="nav-item dmv-nav-item" data-page=".dmv-page-container">PESQUISAR <br/>VEÍCULOS</div>
+                <div class="nav-item weapons-nav-item" data-page=".weapons-page-container">PESQUISAR <br/>ARMAMENTO</div>
+                <!-- <div class="nav-item cams-nav-item" data-page=".cams-page-container">CAMERA</div> -->
+                <div class="nav-item" data-page=".stafflogs-page-container">LOGS</div>
             </div>
             <div style="display: flex; flex-direction: column;">
                 <div class="dispatch-comms-container">
@@ -192,7 +185,7 @@
                 </div>
                 <div class="reports-container" id="home-reports-container" style="display:none">
                     <div style="display: flex;" class="reports-search-title-holder">
-                        <div class="reports-search-title">RELATÓRIOS</div>
+                        <div class="reports-search-title">BOLETIM DE OCORRÊNCIA</div>
                         <div class="reports-search-refresh">Atualizar</div>
                     </div>
                     <div class="reports-items">
@@ -224,11 +217,11 @@
                 <div style="display: flex; align-items: center;">
                     <div class="active-unit-title">Unidades Ativas</div>
                     <div class="active-unit-count" id="police-count">0</div>
-                    <div class="active-unit-count" id="bcso-count">0</div> 
+                    <!-- <div class="active-unit-count" id="bcso-count">0</div>  -->
                     <div class="active-unit-count" id="sasp-count">0</div>
                     <div class="active-unit-count" id="ems-count">0</div>
                     <div class="active-unit-count" id="doj-count">0</div>
-                    <!-- <div class="active-unit-count" id="fire-count">0</div>  -->
+                    <div class="active-unit-count" id="fire-count">0</div> 
                 </div>
                 <div class="active-unit-list">
                 </div>
@@ -248,7 +241,7 @@
             <img src="img/sasp_badge.webp" class="badge-logo">
             <div class="header-left">
                 <div class="header-title" style="color: #caa95d; font-weight: bold; font-size: 18px;">POLICIAMENTO</div>
-                <div style="color: white; font-weight: lighter; font-size: 16px;">Terminal de Banco de Dados</div>
+                <div style="color: white; font-weight: lighter; font-size: 16px;">Sistema Nacional de Informações de Segurança Pública</div>
             </div>
             <div class="header-middle">
                 <div class="date">Carregando...</div>
@@ -263,20 +256,20 @@
         <div class="main-container">
             <div class="nav-menu">
                 <div class="nav-item" data-page=".dashboard-page-container">PAINEL</div>
-                <div class="nav-item active-nav" data-page=".profile-page-container">CIDADÃOS</div>
-                <div class="nav-item incidents-nav-item" data-page=".incidents-page-container">INCIDENTES</div>
-                <div class="nav-item" data-page=".reports-page-container">RELATÓRIOS</div>
-                <div class="nav-item map-nav-item" data-page=".map-page-container">MAPA</div>
-                <div class="nav-item bolo-nav-item" data-page=".bolos-page-container">BOLETIM</div>
-                <div class="nav-item penalcode-nav-item" data-page=".penalcode-page-container">LISTA</div>
-                <div class="nav-item sop-nav-item" data-page=".sop-page-container">POPs</div>
-                <div class="nav-item dmv-nav-item" data-page=".dmv-page-container">DETRAN</div>
-                <div class="nav-item weapons-nav-item" data-page=".weapons-page-container">ARMAS</div>
-                <div class="nav-item cams-nav-item" data-page=".cams-page-container">CAMERA</div>
-                <div class="nav-item" data-page=".stafflogs-page-container">REGISTROS</div>
+                <div class="nav-item active-nav" data-page=".profile-page-container">PESQUISAR <br/>CIDADÃO</div>
+                <div class="nav-item incidents-nav-item" data-page=".incidents-page-container">SISTEMA <br/>PENITENCIÁRIO</div>
+                <div class="nav-item" data-page=".reports-page-container">BOLETIM DE OCORRÊNCIA</div>
+                <div class="nav-item bolo-nav-item" data-page=".bolos-page-container">SUSPEITOS</div>
+                <div class="nav-item map-nav-item" data-page=".map-page-container">GPS DE <br/>DESPACHO</div>
+                <div class="nav-item penalcode-nav-item" data-page=".penalcode-page-container">CÓDIGO PENAL</div>
+                <!-- <div class="nav-item sop-nav-item" data-page=".sop-page-container">DOCS</div> -->
+                <div class="nav-item dmv-nav-item" data-page=".dmv-page-container">PESQUISAR <br/>VEÍCULOS</div>
+                <div class="nav-item weapons-nav-item" data-page=".weapons-page-container">PESQUISAR <br/>ARMAMENTO</div>
+                <!-- <div class="nav-item cams-nav-item" data-page=".cams-page-container">CAMERA</div> -->
+                <div class="nav-item" data-page=".stafflogs-page-container">LOGS</div>
             </div>
             <div class="profile-container">
-                <div class="profile-title"> <span class="fas fa-search"></span> Pesquisar</div>
+                <div class="profile-title"> <span class="fas fa-search"></span> PESQUISAR</div>
                 <div class="profile-search-input"><input id="profile-search-input" type="text"
                         placeholder="Digite um nome ou RG"></div>
                 <div class="profile-items">
@@ -304,10 +297,10 @@
                         <div class="manage-profile-dob">DATA/NASCIMENTO</div>
                         <div><span class="far fa-calendar-alt manage-cid-pic"></span><input type="text" readonly class="manage-profile-dob-input"></div>
                         <div class="line"></div>
-                        <div class="manage-profile-fingerprint">IPRESSÃO DIGITAL</div>
+                        <div class="manage-profile-fingerprint">IMPRESSÃO DIGITAL</div>
                         <div><span class="fas fa-fingerprint manage-cid-pic"></span><input type="text" class="manage-profile-fingerprint-input"></div>
                         <div class="line"></div>
-                        <div class="manage-profile-phonenumber">NUMERO:</div>
+                        <div class="manage-profile-phonenumber">NÚMERO</div>
                         <div><span class="fas fa-phone-volume manage-cid-pic"></span><input type="text" readonly class="manage-profile-phonenumber-input"></div>
                         <div class="line"></div>
                         <div class="manage-profile-job">PROFISSÃO</div>
@@ -316,7 +309,7 @@
                         <div class="manage-profile-apartment">APARTAMENTO</div>
                         <div><span class="fas fa-building manage-cid-pic"></span><input type="text" readonly class="manage-profile-apartment-input"></div>
                         <div class="line"></div>
-                        <div class="manage-profile-url">CIDADÃOS IMAGEM URL</div>
+                        <div class="manage-profile-url">URL DO PERFIL</div>
                         <div><span class="fas fa-images manage-cid-pic"></span><input type="text" class="manage-profile-url-input"></div>
                         <div class="line" style="margin-bottom: 0px;"></div>
                     </div>
@@ -362,7 +355,7 @@
             <img src="img/sasp_badge.webp" class="badge-logo">
             <div class="header-left">
                 <div class="header-title" style="color: #caa95d; font-weight: bold; font-size: 18px;">POLICIAMENTO</div>
-                <div style="color: white; font-weight: lighter; font-size: 16px;">Terminal de Banco de Dados</div>
+                <div style="color: white; font-weight: lighter; font-size: 16px;">Sistema Nacional de Informações de Segurança Pública</div>
             </div>
             <div class="header-middle">
                 <div class="date">Carregando...</div>
@@ -377,21 +370,21 @@
         <div class="main-container">
             <div class="nav-menu">
                 <div class="nav-item" data-page=".dashboard-page-container">PAINEL</div>
-                <div class="nav-item" data-page=".profile-page-container">CIDADÃOS</div>
-                <div class="nav-item incidents-nav-item active-nav" data-page=".incidents-page-container">INCIDENTES</div>
-                <div class="nav-item" data-page=".reports-page-container">RELATÓRIOS</div>
-                <div class="nav-item map-nav-item" data-page=".map-page-container">MAPA</div>
-                <div class="nav-item bolo-nav-item" data-page=".bolos-page-container">BOLETIM</div>
-                <div class="nav-item penalcode-nav-item" data-page=".penalcode-page-container">LISTA</div>
-                <div class="nav-item sop-nav-item" data-page=".sop-page-container">POPs</div>
-                <div class="nav-item dmv-nav-item" data-page=".dmv-page-container">DETRAN</div>
-                <div class="nav-item weapons-nav-item" data-page=".weapons-page-container">ARMAS</div>
-                <div class="nav-item cams-nav-item" data-page=".cams-page-container">CAMERA</div>
-                <div class="nav-item" data-page=".stafflogs-page-container">REGISTROS</div>
+                <div class="nav-item" data-page=".profile-page-container">PESQUISAR <br/>CIDADÃO</div>
+                <div class="nav-item incidents-nav-item active-nav" data-page=".incidents-page-container">SISTEMA <br/>PENITENCIÁRIO</div>
+                <div class="nav-item" data-page=".reports-page-container">BOLETIM DE OCORRÊNCIA</div>
+                <div class="nav-item bolo-nav-item" data-page=".bolos-page-container">SUSPEITOS</div>
+                <div class="nav-item map-nav-item" data-page=".map-page-container">GPS DE <br/>DESPACHO</div>
+                <div class="nav-item penalcode-nav-item" data-page=".penalcode-page-container">CÓDIGO PENAL</div>
+                <!-- <div class="nav-item sop-nav-item" data-page=".sop-page-container">DOCS</div> -->
+                <div class="nav-item dmv-nav-item" data-page=".dmv-page-container">PESQUISAR <br/>VEÍCULOS</div>
+                <div class="nav-item weapons-nav-item" data-page=".weapons-page-container">PESQUISAR <br/>ARMAMENTO</div>
+                <!-- <div class="nav-item cams-nav-item" data-page=".cams-page-container">CAMERA</div> -->
+                <div class="nav-item" data-page=".stafflogs-page-container">LOGS</div>
             </div>
             <div class="incidents-container">
                 <div style="display: flex;" class="reports-search-title-holder">
-                    <div class="incidents-title"> <span class="fas fa-search"></span> Incidentes</div>
+                    <div class="incidents-title"> <span class="fas fa-search"></span> INCIDENTES</div>
                     <div class="incidents-search-refresh">Atualizar</div>
                 </div>
                 <div class="incidents-search-input"><input id="incidents-search-input" placeholder="PESQUISAR INCIDENTE...">
@@ -432,7 +425,7 @@
                 </div>
             </div>
             <div class="associated-incidents-container">
-                <div class="associated-incidents-title">ASSOCIADO</div>
+                <div class="associated-incidents-title">PESSOAS ENVOLVIDAS</div>
                 <div class="manage-incidents-officers-container">
                     <div style="display: flex; align-items: center; width: 95%;">
                         <div class="manage-incidents-officers-title">OFICIAIS ENVOLVIDOS</div>
@@ -469,7 +462,7 @@
             <img src="img/sasp_badge.webp" class="badge-logo">
             <div class="header-left">
                 <div class="header-title" style="color: #caa95d; font-weight: bold; font-size: 18px;">POLICIAMENTO</div>
-                <div style="color: white; font-weight: lighter; font-size: 16px;">Terminal de Banco de Dados</div>
+                <div style="color: white; font-weight: lighter; font-size: 16px;">Sistema Nacional de Informações de Segurança Pública</div>
             </div>
             <div class="header-middle">
                 <div class="date">Carregando...</div>
@@ -484,22 +477,22 @@
         <div class="main-container">
             <div class="nav-menu">
                 <div class="nav-item" data-page=".dashboard-page-container">PAINEL</div>
-                <div class="nav-item" data-page=".profile-page-container">CIDADÃOS</div>
-                <div class="nav-item incidents-nav-item" data-page=".incidents-page-container">INCIDENTES</div>
-                <div class="nav-item  active-nav" data-page=".reports-page-container">RELATÓRIOS</div>
-                <div class="nav-item map-nav-item" data-page=".map-page-container">MAPA</div>
-                <div class="nav-item bolo-nav-item" data-page=".bolos-page-container">BOLETIM</div>
-                <div class="nav-item penalcode-nav-item" data-page=".penalcode-page-container">LISTA</div>
-                <div class="nav-item sop-nav-item" data-page=".sop-page-container">POPs</div>
-                <div class="nav-item dmv-nav-item" data-page=".dmv-page-container">DETRAN</div>
-                <div class="nav-item weapons-nav-item" data-page=".weapons-page-container">ARMAS</div>
-                <div class="nav-item cams-nav-item" data-page=".cams-page-container">CAMERA</div>
-                <div class="nav-item" data-page=".stafflogs-page-container">REGISTROS</div>
+                <div class="nav-item" data-page=".profile-page-container">PESQUISAR <br/>CIDADÃO</div>
+                <div class="nav-item incidents-nav-item" data-page=".incidents-page-container">SISTEMA <br/>PENITENCIÁRIO</div>
+                <div class="nav-item  active-nav" data-page=".reports-page-container">BOLETIM DE OCORRÊNCIA</div>
+                <div class="nav-item bolo-nav-item" data-page=".bolos-page-container">SUSPEITOS</div>
+                <div class="nav-item map-nav-item" data-page=".map-page-container">GPS DE <br/>DESPACHO</div>
+                <div class="nav-item penalcode-nav-item" data-page=".penalcode-page-container">CÓDIGO PENAL</div>
+                <!-- <div class="nav-item sop-nav-item" data-page=".sop-page-container">DOCS</div> -->
+                <div class="nav-item dmv-nav-item" data-page=".dmv-page-container">PESQUISAR <br/>VEÍCULOS</div>
+                <div class="nav-item weapons-nav-item" data-page=".weapons-page-container">PESQUISAR <br/>ARMAMENTO</div>
+                <!-- <div class="nav-item cams-nav-item" data-page=".cams-page-container">CAMERA</div> -->
+                <div class="nav-item" data-page=".stafflogs-page-container">LOGS</div>
             </div>
             <div class="reports-container">
 
                 <div style="display: flex;" class="reports-search-title-holder">
-                    <div class="reports-search-title"> <span class="fas fa-search"></span> RELATÓRIOS</div>
+                    <div class="reports-search-title"> <span class="fas fa-search"></span> BOLETIM DE OCORRÊNCIA</div>
                     <div class="reports-search-refresh">Atualizar</div>
                 </div>
                 <div class="reports-search-input"><input id="reports-search-input" placeholder="BUSCAR RELATÓRIO..."> </div>
@@ -566,7 +559,7 @@
             <img src="img/sasp_badge.webp" class="badge-logo">
             <div class="header-left">
                 <div class="header-title" style="color: #caa95d; font-weight: bold; font-size: 18px;">POLICIAMENTO</div>
-                <div style="color: white; font-weight: lighter; font-size: 16px;">Terminal de Banco de Dados</div>
+                <div style="color: white; font-weight: lighter; font-size: 16px;">Sistema Nacional de Informações de Segurança Pública</div>
             </div>
             <div class="header-middle">
                 <div class="date">Carregando...</div>
@@ -581,17 +574,17 @@
         <div class="main-container">
             <div class="nav-menu">
                 <div class="nav-item" data-page=".dashboard-page-container">PAINEL</div>
-                <div class="nav-item" data-page=".profile-page-container">CIDADÃOS</div>
-                <div class="nav-item incidents-nav-item" data-page=".incidents-page-container">INCIDENTES</div>
-                <div class="nav-item" data-page=".reports-page-container">RELATÓRIOS</div>
-                <div class="nav-item map-nav-item" data-page=".map-page-container">MAPA</div>
-                <div class="nav-item bolo-nav-item active-nav" data-page=".bolos-page-container">BOLETIM</div>
-                <div class="nav-item penalcode-nav-item" data-page=".penalcode-page-container">LISTA</div>
-                <div class="nav-item sop-nav-item" data-page=".sop-page-container">POPs</div>
-                <div class="nav-item dmv-nav-item" data-page=".dmv-page-container">DETRAN</div>
-                <div class="nav-item weapons-nav-item" data-page=".weapons-page-container">ARMAS</div>
-                <div class="nav-item cams-nav-item" data-page=".cams-page-container">CAMERA</div>
-                <div class="nav-item" data-page=".stafflogs-page-container">REGISTROS</div>
+                <div class="nav-item" data-page=".profile-page-container">PESQUISAR <br/>CIDADÃO</div>
+                <div class="nav-item incidents-nav-item" data-page=".incidents-page-container">SISTEMA <br/>PENITENCIÁRIO</div>
+                <div class="nav-item" data-page=".reports-page-container">BOLETIM DE OCORRÊNCIA</div>
+                <div class="nav-item bolo-nav-item active-nav" data-page=".bolos-page-container">SUSPEITOS</div>
+                <div class="nav-item map-nav-item" data-page=".map-page-container">GPS DE <br/>DESPACHO</div>
+                <div class="nav-item penalcode-nav-item" data-page=".penalcode-page-container">CÓDIGO PENAL</div>
+                <!-- <div class="nav-item sop-nav-item" data-page=".sop-page-container">DOCS</div> -->
+                <div class="nav-item dmv-nav-item" data-page=".dmv-page-container">PESQUISAR <br/>VEÍCULOS</div>
+                <div class="nav-item weapons-nav-item" data-page=".weapons-page-container">PESQUISAR <br/>ARMAMENTO</div>
+                <!-- <div class="nav-item cams-nav-item" data-page=".cams-page-container">CAMERA</div> -->
+                <div class="nav-item" data-page=".stafflogs-page-container">LOGS</div>
             </div>
             <div class="bolos-container">
 
@@ -661,7 +654,7 @@
             <img src="img/sasp_badge.webp" class="badge-logo">
             <div class="header-left">
                 <div class="header-title" style="color: #caa95d; font-weight: bold; font-size: 18px;">POLICIAMENTO</div>
-                <div style="color: white; font-weight: lighter; font-size: 16px;">Terminal de Banco de Dados</div>
+                <div style="color: white; font-weight: lighter; font-size: 16px;">Sistema Nacional de Informações de Segurança Pública</div>
             </div>
             <div class="header-middle">
                 <div class="date">Carregando...</div>
@@ -676,17 +669,17 @@
         <div class="main-container">
             <div class="nav-menu">
                 <div class="nav-item" data-page=".dashboard-page-container">PAINEL</div>
-                <div class="nav-item" data-page=".profile-page-container">CIDADÃOS</div>
-                <div class="nav-item incidents-nav-item" data-page=".incidents-page-container">INCIDENTES</div>
-                <div class="nav-item" data-page=".reports-page-container">RELATÓRIOS</div>
-                <div class="nav-item map-nav-item" data-page=".map-page-container">MAPA</div>
-                <div class="nav-item bolo-nav-item" data-page=".bolos-page-container">BOLETIM</div>
-                <div class="nav-item penalcode-nav-item active-nav" data-page=".penalcode-page-container">LISTA</div>
-                <div class="nav-item sop-nav-item" data-page=".sop-page-container">POPs</div>
-                <div class="nav-item dmv-nav-item" data-page=".dmv-page-container">DETRAN</div>
-                <div class="nav-item weapons-nav-item" data-page=".weapons-page-container">ARMAS</div>
-                <div class="nav-item cams-nav-item" data-page=".cams-page-container">CAMERA</div>
-                <div class="nav-item" data-page=".stafflogs-page-container">REGISTROS</div>
+                <div class="nav-item" data-page=".profile-page-container">PESQUISAR <br/>CIDADÃO</div>
+                <div class="nav-item incidents-nav-item" data-page=".incidents-page-container">SISTEMA <br/>PENITENCIÁRIO</div>
+                <div class="nav-item" data-page=".reports-page-container">BOLETIM DE OCORRÊNCIA</div>
+                <div class="nav-item bolo-nav-item" data-page=".bolos-page-container">SUSPEITOS</div>
+                <div class="nav-item map-nav-item" data-page=".map-page-container">GPS DE <br/>DESPACHO</div>
+                <div class="nav-item penalcode-nav-item active-nav" data-page=".penalcode-page-container">CÓDIGO PENAL</div>
+                <!-- <div class="nav-item sop-nav-item" data-page=".sop-page-container">DOCS</div> -->
+                <div class="nav-item dmv-nav-item" data-page=".dmv-page-container">PESQUISAR <br/>VEÍCULOS</div>
+                <div class="nav-item weapons-nav-item" data-page=".weapons-page-container">PESQUISAR <br/>ARMAMENTO</div>
+                <!-- <div class="nav-item cams-nav-item" data-page=".cams-page-container">CAMERA</div> -->
+                <div class="nav-item" data-page=".stafflogs-page-container">LOGS</div>
             </div>
             <div class="penalcode-embed" style="border:none;">
                 <iframe class="roster-iframe" src="" target="_blank"></iframe>
@@ -698,7 +691,7 @@
             <img src="img/sasp_badge.webp" class="badge-logo">
             <div class="header-left">
                 <div class="header-title" style="color: #caa95d; font-weight: bold; font-size: 18px;">POLICIAMENTO</div>
-                <div style="color: white; font-weight: lighter; font-size: 16px;">Terminal de Banco de Dados</div>
+                <div style="color: white; font-weight: lighter; font-size: 16px;">Sistema Nacional de Informações de Segurança Pública</div>
             </div>
             <div class="header-middle">
                 <div class="date">Carregando...</div>
@@ -713,17 +706,17 @@
         <div class="main-container">
             <div class="nav-menu">
                 <div class="nav-item" data-page=".dashboard-page-container">PAINEL</div>
-                <div class="nav-item" data-page=".profile-page-container">CIDADÃOS</div>
-                <div class="nav-item incidents-nav-item" data-page=".incidents-page-container">INCIDENTES</div>
-                <div class="nav-item" data-page=".reports-page-container">RELATÓRIOS</div>
-                <div class="nav-item map-nav-item" data-page=".map-page-container">MAPA</div>
-                <div class="nav-item bolo-nav-item" data-page=".bolos-page-container">BOLETIM</div>
-                <div class="nav-item penalcode-nav-item" data-page=".penalcode-page-container">LISTA</div>
-                <div class="nav-item sop-nav-item active-nav" data-page=".sop-page-container">POPs</div>
-                <div class="nav-item dmv-nav-item" data-page=".dmv-page-container">DETRAN</div>
-                <div class="nav-item weapons-nav-item" data-page=".weapons-page-container">ARMAS</div>
-                <div class="nav-item cams-nav-item" data-page=".cams-page-container">CAMERA</div>
-                <div class="nav-item" data-page=".stafflogs-page-container">REGISTROS</div>
+                <div class="nav-item" data-page=".profile-page-container">PESQUISAR <br/>CIDADÃO</div>
+                <div class="nav-item incidents-nav-item" data-page=".incidents-page-container">SISTEMA <br/>PENITENCIÁRIO</div>
+                <div class="nav-item" data-page=".reports-page-container">BOLETIM DE OCORRÊNCIA</div>
+                <div class="nav-item bolo-nav-item" data-page=".bolos-page-container">SUSPEITOS</div>
+                <div class="nav-item map-nav-item" data-page=".map-page-container">GPS DE <br/>DESPACHO</div>
+                <div class="nav-item penalcode-nav-item" data-page=".penalcode-page-container">CÓDIGO PENAL</div>
+                <div class="nav-item sop-nav-item active-nav" data-page=".sop-page-container">DOCS</div>
+                <div class="nav-item dmv-nav-item" data-page=".dmv-page-container">PESQUISAR <br/>VEÍCULOS</div>
+                <div class="nav-item weapons-nav-item" data-page=".weapons-page-container">PESQUISAR <br/>ARMAMENTO</div>
+                <!-- <div class="nav-item cams-nav-item" data-page=".cams-page-container">CAMERA</div> -->
+                <div class="nav-item" data-page=".stafflogs-page-container">LOGS</div>
             </div>
             <div class="sop-embed" style="border:none;">
                 <iframe class="sop-iframe" src="" target="_blank"></iframe>
@@ -735,7 +728,7 @@
             <img src="img/sasp_badge.webp" class="badge-logo">
             <div class="header-left">
                 <div class="header-title" style="color: #caa95d; font-weight: bold; font-size: 18px;">POLICIAMENTO</div>
-                <div style="color: white; font-weight: lighter; font-size: 16px;">Terminal de Banco de Dados</div>
+                <div style="color: white; font-weight: lighter; font-size: 16px;">Sistema Nacional de Informações de Segurança Pública</div>
             </div>
             <div class="header-middle">
                 <div class="date">Carregando...</div>
@@ -750,21 +743,21 @@
         <div class="main-container">
             <div class="nav-menu">
                 <div class="nav-item" data-page=".dashboard-page-container">PAINEL</div>
-                <div class="nav-item" data-page=".profile-page-container">CIDADÃOS</div>
-                <div class="nav-item incidents-nav-item" data-page=".incidents-page-container">INCIDENTES</div>
-                <div class="nav-item" data-page=".reports-page-container">RELATÓRIOS</div>
-                <div class="nav-item map-nav-item" data-page=".map-page-container">MAPA</div>
-                <div class="nav-item bolo-nav-item" data-page=".bolos-page-container">BOLETIM</div>
-                <div class="nav-item penalcode-nav-item" data-page=".penalcode-page-container">LISTA</div>
-                <div class="nav-item sop-nav-item" data-page=".sop-page-container">POPs</div>
-                <div class="nav-item dmv-nav-item active-nav" data-page=".dmv-page-container">DETRAN</div>
-                <div class="nav-item weapons-nav-item" data-page=".weapons-page-container">ARMAS</div>
-                <div class="nav-item cams-nav-item" data-page=".cams-page-container">CAMERA</div>
-                <div class="nav-item" data-page=".stafflogs-page-container">REGISTROS</div>
+                <div class="nav-item" data-page=".profile-page-container">PESQUISAR <br/>CIDADÃO</div>
+                <div class="nav-item incidents-nav-item" data-page=".incidents-page-container">SISTEMA <br/>PENITENCIÁRIO</div>
+                <div class="nav-item" data-page=".reports-page-container">BOLETIM DE OCORRÊNCIA</div>
+                <div class="nav-item bolo-nav-item" data-page=".bolos-page-container">SUSPEITOS</div>
+                <div class="nav-item map-nav-item" data-page=".map-page-container">GPS DE <br/>DESPACHO</div>
+                <div class="nav-item penalcode-nav-item" data-page=".penalcode-page-container">CÓDIGO PENAL</div>
+                <!-- <div class="nav-item sop-nav-item" data-page=".sop-page-container">DOCS</div> -->
+                <div class="nav-item dmv-nav-item active-nav" data-page=".dmv-page-container">PESQUISAR <br/>VEÍCULOS</div>
+                <div class="nav-item weapons-nav-item" data-page=".weapons-page-container">PESQUISAR <br/>ARMAMENTO</div>
+                <!-- <div class="nav-item cams-nav-item" data-page=".cams-page-container">CAMERA</div> -->
+                <div class="nav-item" data-page=".stafflogs-page-container">LOGS</div>
             </div>
             <div class="dmv-container">
                 <div class="dmv-search-title"> <span class="fas fa-search"></span> VEICULOS </div>
-                <div class="dmv-search-input"><input id="dmv-search-input" placeholder="PESQUISAR VEÍCULOS ..."> </div>
+                <div class="dmv-search-input"><input id="dmv-search-input" placeholder="PESQUISAR <br/>VEÍCULOS ..."> </div>
                 <div class="dmv-items">
 
                 </div>
@@ -801,9 +794,9 @@
                     <div class="vehicle-info-tags-holder">
                         <div class="vehicle-tags">
                             <div class="vehicle-tag red-tag">PINTURA</div>
-                            <div class="vehicle-tag red-tag">PATIO</div>
-                            <div class="vehicle-tag red-tag">BOLETIM</div>
-                            <div class="vehicle-tag red-tag">Code 5</div>
+                            <div class="vehicle-tag red-tag">PÁTIO</div>
+                            <div class="vehicle-tag red-tag">SUSPEITO</div>
+                            <div class="vehicle-tag red-tag">CÓDIGO 5</div>
                             <div class="vehicle-tag red-tag">ROUBADO</div>
                         </div>
                     </div>
@@ -817,7 +810,7 @@
             <img src="img/sasp_badge.webp" class="badge-logo">
             <div class="header-left">
                 <div class="header-title" style="color: #caa95d; font-weight: bold; font-size: 18px;">POLICIAMENTO</div>
-                <div style="color: white; font-weight: lighter; font-size: 16px;">Terminal de Banco de Dados</div>
+                <div style="color: white; font-weight: lighter; font-size: 16px;">Sistema Nacional de Informações de Segurança Pública</div>
             </div>
             <div class="header-middle">
                 <div class="date">Carregando...</div>
@@ -832,17 +825,17 @@
         <div class="main-container">
             <div class="nav-menu">
                 <div class="nav-item" data-page=".dashboard-page-container">PAINEL</div>
-                <div class="nav-item" data-page=".profile-page-container">CIDADÃOS</div>
-                <div class="nav-item incidents-nav-item" data-page=".incidents-page-container">INCIDENTES</div>
-                <div class="nav-item" data-page=".reports-page-container">RELATÓRIOS</div>
-                <div class="nav-item map-nav-item" data-page=".map-page-container">MAPA</div>
-                <div class="nav-item bolo-nav-item" data-page=".bolos-page-container">BOLETIM</div>
-                <div class="nav-item penalcode-nav-item" data-page=".penalcode-page-container">LISTA</div>
-                <div class="nav-item sop-nav-item" data-page=".sop-page-container">POPs</div>
-                <div class="nav-item dmv-nav-item" data-page=".dmv-page-container">DETRAN</div>
-                <div class="nav-item weapons-nav-item active-nav" data-page=".weapons-page-container">ARMAS</div>
-                <div class="nav-item cams-nav-item" data-page=".cams-page-container">CAMERA</div>
-                <div class="nav-item" data-page=".stafflogs-page-container">REGISTROS</div>
+                <div class="nav-item" data-page=".profile-page-container">PESQUISAR <br/>CIDADÃO</div>
+                <div class="nav-item incidents-nav-item" data-page=".incidents-page-container">SISTEMA <br/>PENITENCIÁRIO</div>
+                <div class="nav-item" data-page=".reports-page-container">BOLETIM DE OCORRÊNCIA</div>
+                <div class="nav-item bolo-nav-item" data-page=".bolos-page-container">SUSPEITOS</div>
+                <div class="nav-item map-nav-item" data-page=".map-page-container">GPS DE <br/>DESPACHO</div>
+                <div class="nav-item penalcode-nav-item" data-page=".penalcode-page-container">CÓDIGO PENAL</div>
+                <!-- <div class="nav-item sop-nav-item" data-page=".sop-page-container">DOCS</div> -->
+                <div class="nav-item dmv-nav-item" data-page=".dmv-page-container">PESQUISAR <br/>VEÍCULOS</div>
+                <div class="nav-item weapons-nav-item active-nav" data-page=".weapons-page-container">PESQUISAR <br/>ARMAMENTO</div>
+                <!-- <div class="nav-item cams-nav-item" data-page=".cams-page-container">CAMERA</div> -->
+                <div class="nav-item" data-page=".stafflogs-page-container">LOGS</div>
             </div>
             <div class="weapons-container">
                 <div class="weapons-search-title"> <span class="fas fa-search"></span> ARMAS</div>
@@ -886,7 +879,7 @@
             <img src="img/sasp_badge.webp" class="badge-logo">
             <div class="header-left">
                 <div class="header-title" style="color: #caa95d; font-weight: bold; font-size: 18px;">POLICIAMENTO</div>
-                <div style="color: white; font-weight: lighter; font-size: 16px;">Terminal de Banco de Dados</div>
+                <div style="color: white; font-weight: lighter; font-size: 16px;">Sistema Nacional de Informações de Segurança Pública</div>
             </div>
             <div class="header-middle">
                 <div class="date">Carregando...</div>
@@ -901,17 +894,17 @@
         <div class="main-container">
             <div class="nav-menu">
                 <div class="nav-item" data-page=".dashboard-page-container">PAINEL</div>
-                <div class="nav-item" data-page=".profile-page-container">CIDADÃOS</div>
-                <div class="nav-item incidents-nav-item" data-page=".incidents-page-container">INCIDENTES</div>
-                <div class="nav-item" data-page=".reports-page-container">RELATÓRIOS</div>
-                <div class="nav-item map-nav-item" data-page=".map-page-container">MAPA</div>
-                <div class="nav-item bolo-nav-item" data-page=".bolos-page-container">BOLETIM</div>
-                <div class="nav-item penalcode-nav-item" data-page=".penalcode-page-container">LISTA</div>
-                <div class="nav-item sop-nav-item" data-page=".sop-page-container">POPs</div>
-                <div class="nav-item dmv-nav-item" data-page=".dmv-page-container">DETRAN</div>
-                <div class="nav-item weapons-nav-item" data-page=".weapons-page-container">ARMAS</div>
-                <div class="nav-item cams-nav-item" data-page=".cams-page-container">CAMERA</div>
-                <div class="nav-item active-nav" data-page=".stafflogs-page-container">REGISTROS</div>
+                <div class="nav-item" data-page=".profile-page-container">PESQUISAR <br/>CIDADÃO</div>
+                <div class="nav-item incidents-nav-item" data-page=".incidents-page-container">SISTEMA <br/>PENITENCIÁRIO</div>
+                <div class="nav-item" data-page=".reports-page-container">BOLETIM DE OCORRÊNCIA</div>
+                <div class="nav-item bolo-nav-item" data-page=".bolos-page-container">SUSPEITOS</div>
+                <div class="nav-item map-nav-item" data-page=".map-page-container">GPS DE <br/>DESPACHO</div>
+                <div class="nav-item penalcode-nav-item" data-page=".penalcode-page-container">CÓDIGO PENAL</div>
+                <!-- <div class="nav-item sop-nav-item" data-page=".sop-page-container">DOCS</div> -->
+                <div class="nav-item dmv-nav-item" data-page=".dmv-page-container">PESQUISAR <br/>VEÍCULOS</div>
+                <div class="nav-item weapons-nav-item" data-page=".weapons-page-container">PESQUISAR <br/>ARMAMENTO</div>
+                <!-- <div class="nav-item cams-nav-item" data-page=".cams-page-container">CAMERA</div> -->
+                <div class="nav-item active-nav" data-page=".stafflogs-page-container">LOGS</div>
             </div>
             <div class="stafflogs-container">
                 <div class="stafflogs-box-title">LOGS</div>
@@ -929,7 +922,7 @@
             <img src="img/sasp_badge.webp" class="badge-logo">
             <div class="header-left">
                 <div class="header-title" style="color: #caa95d; font-weight: bold; font-size: 18px;">POLICIAMENTO</div>
-                <div style="color: white; font-weight: lighter; font-size: 16px;">Terminal de Banco de Dados</div>
+                <div style="color: white; font-weight: lighter; font-size: 16px;">Sistema Nacional de Informações de Segurança Pública</div>
             </div>
             <div class="header-middle">
                 <div class="date">Carregando...</div>
@@ -944,17 +937,17 @@
         <div class="main-container">
             <div class="nav-menu">
                 <div class="nav-item" data-page=".dashboard-page-container">PAINEL</div>
-                <div class="nav-item" data-page=".profile-page-container">CIDADÃOS</div>
-                <div class="nav-item incidents-nav-item" data-page=".incidents-page-container">INCIDENTES</div>
-                <div class="nav-item" data-page=".reports-page-container">RELATÓRIOS</div>
-                <div class="nav-item map-nav-item" data-page=".map-page-container">MAPA</div>
-                <div class="nav-item bolo-nav-item" data-page=".bolos-page-container">BOLETIM</div>
-                <div class="nav-item penalcode-nav-item" data-page=".penalcode-page-container">LISTA</div>
-                <div class="nav-item sop-nav-item" data-page=".sop-page-container">POPs</div>
-                <div class="nav-item dmv-nav-item" data-page=".dmv-page-container">DETRAN</div>
-                <div class="nav-item weapons-nav-item" data-page=".weapons-page-container">ARMAS</div>
+                <div class="nav-item" data-page=".profile-page-container">PESQUISAR <br/>CIDADÃO</div>
+                <div class="nav-item incidents-nav-item" data-page=".incidents-page-container">SISTEMA <br/>PENITENCIÁRIO</div>
+                <div class="nav-item" data-page=".reports-page-container">BOLETIM DE OCORRÊNCIA</div>
+                <div class="nav-item bolo-nav-item" data-page=".bolos-page-container">SUSPEITOS</div>
+                <div class="nav-item map-nav-item" data-page=".map-page-container">GPS DE <br/>DESPACHO</div>
+                <div class="nav-item penalcode-nav-item" data-page=".penalcode-page-container">CÓDIGO PENAL</div>
+                <!-- <div class="nav-item sop-nav-item" data-page=".sop-page-container">DOCS</div> -->
+                <div class="nav-item dmv-nav-item" data-page=".dmv-page-container">PESQUISAR <br/>VEÍCULOS</div>
+                <div class="nav-item weapons-nav-item" data-page=".weapons-page-container">PESQUISAR <br/>ARMAMENTO</div>
                 <div class="nav-item cams-nav-item active-nav" data-page=".cams-page-container">CAMERA</div>
-                <div class="nav-item" data-page=".stafflogs-page-container">REGISTROS</div>
+                <div class="nav-item" data-page=".stafflogs-page-container">LOGS</div>
             </div>
             <div class="cams-container">
                 <div class="cams-item">
@@ -1002,7 +995,7 @@
             <img src="img/sasp_badge.webp" class="badge-logo">
             <div class="header-left">
                 <div class="header-title" style="color: #caa95d; font-weight: bold; font-size: 18px;">POLICIAMENTO</div>
-                <div style="color: white; font-weight: lighter; font-size: 16px;">Terminal de Banco de Dados</div>
+                <div style="color: white; font-weight: lighter; font-size: 16px;">Sistema Nacional de Informações de Segurança Pública</div>
             </div>
             <div class="header-middle">
                 <div class="date">Carregando...</div>
@@ -1017,20 +1010,20 @@
         <div class="main-container">
             <div class="nav-menu">
                 <div class="nav-item" data-page=".dashboard-page-container">PAINEL</div>
-                <div class="nav-item" data-page=".profile-page-container">CIDADÃOS</div>
-                <div class="nav-item incidents-nav-item" data-page=".incidents-page-container">INCIDENTES</div>
-                <div class="nav-item" data-page=".reports-page-container">RELATÓRIOS</div>
-                <div class="nav-item map-nav-item active-nav" data-page=".map-page-container">MAPA</div>
-                <div class="nav-item bolo-nav-item" data-page=".bolos-page-container">BOLETIM</div>
-                <div class="nav-item penalcode-nav-item" data-page=".penalcode-page-container">LISTA</div>
-                <div class="nav-item sop-nav-item" data-page=".sop-page-container">POPs</div>
-                <div class="nav-item dmv-nav-item" data-page=".dmv-page-container">DETRAN</div>
-                <div class="nav-item weapons-nav-item" data-page=".weapons-page-container">ARMAS</div>
-                <div class="nav-item cams-nav-item" data-page=".cams-page-container">CAMERA</div>
-                <div class="nav-item" data-page=".stafflogs-page-container">REGISTROS</div>
+                <div class="nav-item" data-page=".profile-page-container">PESQUISAR <br/>CIDADÃO</div>
+                <div class="nav-item incidents-nav-item" data-page=".incidents-page-container">SISTEMA <br/>PENITENCIÁRIO</div>
+                <div class="nav-item" data-page=".reports-page-container">BOLETIM DE OCORRÊNCIA</div>
+                <div class="nav-item bolo-nav-item" data-page=".bolos-page-container">SUSPEITOS</div>
+                <div class="nav-item map-nav-item active-nav" data-page=".map-page-container">GPS DE <br/>DESPACHO</div>
+                <div class="nav-item penalcode-nav-item" data-page=".penalcode-page-container">CÓDIGO PENAL</div>
+                <!-- <div class="nav-item sop-nav-item" data-page=".sop-page-container">DOCS</div> -->
+                <div class="nav-item dmv-nav-item" data-page=".dmv-page-container">PESQUISAR <br/>VEÍCULOS</div>
+                <div class="nav-item weapons-nav-item" data-page=".weapons-page-container">PESQUISAR <br/>ARMAMENTO</div>
+                <!-- <div class="nav-item cams-nav-item" data-page=".cams-page-container">CAMERA</div> -->
+                <div class="nav-item" data-page=".stafflogs-page-container">LOGS</div>
             </div>
             <div class="calls-container">
-                <div class="calls-search-title"> <span class="fas fa-search"></span>CHAMADAS DE DESPACHO</div>
+                <div class="calls-search-title"> <span class="fas fa-search"></span> CHAMADAS DE DESPACHO</div>
                 <div class="calls-search-input"><input id="calls-search-input" placeholder="PESQUISAR CHAMADAS DE DESPACHO..."> </div>
                 <div class="active-calls-list">
                     <div class="active-calls-item">
