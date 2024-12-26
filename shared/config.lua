@@ -7,7 +7,7 @@ Config.OnlyShowOnDuty = true
 -- RECOMMENDED Fivemerr Images. DOES NOT EXPIRE. 
 -- YOU NEED TO SET THIS UP FOLLOW INSTRUCTIONS BELOW.
 -- Documents: https://docs.fivemerr.com/integrations/mdt-scripts/ps-mdt
-Config.FivemerrMugShot = true
+Config.FivemerrMugShot = false
 
 -- Discord webhook for images. NOT RECOMMENDED, IMAGES EXPIRE.
 Config.MugShotWebhook = false
